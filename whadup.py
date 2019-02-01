@@ -52,12 +52,19 @@ while True:
         test=center
         cv.imshow("im3",frame)
         cv.setMouseCallback('im3',coordinates)
-        if cv.waitKey(30)==27:
-                break
-print ("x=",center[0],"y=",center[1])
-print ("x=",round((center[0]-320)*(30/357))-4,"y=",round((480-center[1])*(30/357))-9)
-print ("to"+"\n","x=",ex,"y=",why)
-print ("x=",(ex-320)*(30/357)-4,"y=",(480-why)*(30/357)-9)
+        if cv.waitKey(5)==27:
+                print ("x=",center[0],"y=",center[1])
+                print ("x=",round((center[0]-320)*(0.0854)),"y=",round((480-center[1])*(0.0854)))
+                #break
+        if cv.waitKey(5)==ord('c'):
+                break #print ("x=",center[0],"y=",center[1])
+                #print ("x=",round((center[0]-320)*(30/357))-4,"y=",round((480-center[1])*(30/357))-9)
+
+
+# print ("x=",center[0],"y=",center[1])
+# print ("x=",round((center[0]-320)*(30/357))-4,"y=",round((480-center[1])*(30/357))-9)
+# print ("to"+"\n","x=",ex,"y=",why)
+# print ("x=",(ex-320)*(30/357)-4,"y=",(480-why)*(30/357)-9)
 
         #cv.imshow('frame',frame)
         #cv.imshow('mask',mask)
